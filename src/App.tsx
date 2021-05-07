@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import EMAILQrCode from './components/EMAILQrCode';
+import SMSQrCode from './components/SMSQrCode';
+import URLQrCode from './components/URLQrCode';
+import Header from './components/Header';
 
-function App() {
+
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Header">
+      <div>
+        <Header />
+      </div>
+      <div className="Container">
+          <div className="Row1">
+            <EMAILQrCode />
+        </div>
+        <div className="Row2">
+          <SMSQrCode />
+        </div>
+        <div className="Row3">
+          <URLQrCode />
+        </div>
+      </div>
     </div>
-  );
+  );    
 }
+
+
 
 export default App;
