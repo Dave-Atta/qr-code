@@ -21,7 +21,6 @@ body {
 }
 .qrcode{
   margin-top: 10px;
-  visibility: hidden;
 }
 .button{
   color: black;
